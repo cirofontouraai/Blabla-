@@ -1,0 +1,6 @@
+{
+  "name": "BlaBla$",
+  "description": "Painel Inteligente Floating Overlay Widget para motoristas de BlaBlaCar, trazendo inteligência de mercado em tempo real, cálculo de preço sugerido competitivo e rolagem automática para o topo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
