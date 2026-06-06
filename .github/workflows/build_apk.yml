@@ -2,7 +2,7 @@ name: Gerar APK do BlaBla-
 
 on:
   push:
-    branches: [ "principal" ] # Executa sempre que você atualizar a branch principal
+    branches: [ "principal", "main" ]
   workflow_dispatch: # Permite que você clique em um botão para gerar o APK manualmente
 
 jobs:
