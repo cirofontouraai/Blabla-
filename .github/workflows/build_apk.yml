@@ -2,7 +2,7 @@ name: Gerar APK do BlaBla-
 
 on:
   push:
-    branches: [ "principal", "main" ]
+    branches: [ "principal" ] # Executa sempre que você atualizar a branch principal
   workflow_dispatch: # Permite que você clique em um botão para gerar o APK manualmente
 
 jobs:
@@ -20,7 +20,8 @@ jobs:
         java-version: '17'
         cache: gradle
 
-        - name: Dar permissão de execução para o Gradle
+    
+    - name: Dar permissão de execução para o Gradle
       run: chmod +x gradlew
       working-directory: aplicativo
 
@@ -31,7 +32,5 @@ jobs:
     - name: Guardar o arquivo APK gerado
       uses: actions/upload-artifact@v4
       with:
-        name: Pool-Go-Car-App
+        name: BlaBla-App
         path: aplicativo/app/build/outputs/apk/debug/app-debug.apk
-
-
