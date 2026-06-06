@@ -30,4 +30,3 @@ jobs:
       with:
         name: Blabla-App-Debug
         path: aplicativo/build/outputs/apk/debug/aplicativo-debug.apk
-
