@@ -20,15 +20,18 @@ jobs:
         java-version: '17'
         cache: gradle
 
-    - name: Dar permissão de execução para o Gradle
+        - name: Dar permissão de execução para o Gradle
       run: chmod +x gradlew
+      working-directory: aplicativo
 
     - name: Compilar o APK de Teste (Debug)
       run: ./gradlew assembleDebug
+      working-directory: aplicativo
 
     - name: Guardar o arquivo APK gerado
       uses: actions/upload-artifact@v4
       with:
-        name: Blabla-App-Debug
-        path: app/build/outputs/apk/debug/app-debug.apk
+        name: Pool-Go-Car-App
+        path: aplicativo/app/build/outputs/apk/debug/app-debug.apk
+
 
