@@ -2,7 +2,7 @@ name: Gerar APK do BlaBla-
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "principal" ]
   workflow_dispatch:
 
 jobs:
@@ -24,10 +24,10 @@ jobs:
       run: chmod +x gradlew
 
     - name: Compilar o APK de Teste (Debug)
-      run: ./gradlew assembleDebug
+      run: ./gradlew :aplicativo:assembleDebug
 
     - name: Guardar o arquivo APK gerado
       uses: actions/upload-artifact@v4
       with:
         name: Blabla-App-Debug
-        path: app/build/outputs/apk/debug/app-debug.apk
+        path: aplicativo/build/outputs/apk/debug/aplicativo-debug.apk
