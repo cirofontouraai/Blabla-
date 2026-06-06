@@ -2,7 +2,7 @@ name: Gerar APK do BlaBla-
 
 on:
   push:
-    branches: [ "principal" ]
+    branches: [ "main", "principal" ]
   workflow_dispatch:
 
 jobs:
@@ -23,10 +23,10 @@ jobs:
       uses: gradle/actions/setup-gradle@v4
 
     - name: Compilar o APK de Teste (Debug)
-      run: gradle :aplicativo:assembleDebug
+      run: gradle :app:assembleDebug
 
     - name: Guardar o arquivo APK gerado
       uses: actions/upload-artifact@v4
       with:
         name: Blabla-App-Debug
-        path: aplicativo/build/outputs/apk/debug/aplicativo-debug.apk
+        path: app/build/outputs/apk/debug/app-debug.apk
