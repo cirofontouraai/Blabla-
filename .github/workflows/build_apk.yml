@@ -2,7 +2,7 @@ name: Gerar APK do BlaBla-
 
 on:
   push:
-    branches: [ "principal" ]
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
