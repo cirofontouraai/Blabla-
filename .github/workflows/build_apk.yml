@@ -18,13 +18,12 @@ jobs:
       with:
         distribution: 'zulu'
         java-version: '17'
-        cache: gradle
 
-    - name: Dar permissão de execução para o Gradle
-      run: chmod +x gradlew
+    - name: Configurar o Gradle
+      uses: gradle/actions/setup-gradle@v4
 
     - name: Compilar o APK de Teste (Debug)
-      run: ./gradlew :aplicativo:assembleDebug
+      run: gradle :aplicativo:assembleDebug
 
     - name: Guardar o arquivo APK gerado
       uses: actions/upload-artifact@v4
